@@ -3,13 +3,13 @@
 Created on Wed Nov 24 10:58:37 2021
 
 @author: Khobeib
-"""---
+"""
 
 import pandas as pd
 import pickle
 import numpy as np
 import streamlit as st
-with open('musicPredictor.pkl','rb') as f:
+with open('r"/app/musicPredictor.pkl','rb') as f:
     mymodel = pickle.load(f)
     
 
