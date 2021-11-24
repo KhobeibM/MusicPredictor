@@ -9,7 +9,7 @@ import pandas as pd
 import pickle
 import numpy as np
 import streamlit as st
-with open('r"/app/musicPredictor.pkl','rb') as f:
+with open(r"/app/musicPredictor.pkl",'rb') as f:
     mymodel = pickle.load(f)
     
 
