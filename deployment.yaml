@@ -16,7 +16,7 @@ spec:
         app: musicpredictor
     spec:
       containers:
-      - name: musicpredictor-1
-        image: gcr.io/mymusicpredictor/github.com/khobeibm/musicpredictor:v1
+      - name: musicpredictor
+        image: gcr.io/mymusicpredictor/musicpredictor:v1
         ports:
         - containerPort: 8501
