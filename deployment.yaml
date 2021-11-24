@@ -13,7 +13,7 @@ spec:
         app: musicpredictor
     spec:
       containers:
-      - name: cv-app
-        image: gcr.io/$PROJECT_ID/musicpredictor
+      - name: musicpredictor-1
+        image: gcr.io/mymusicpredictor/github.com/khobeibm/musicpredictor:$SHORT_SHA
         ports:
         - containerPort: 8501
