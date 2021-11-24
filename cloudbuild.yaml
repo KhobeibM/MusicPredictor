@@ -15,6 +15,6 @@ steps:
   args:
   - run
   - --filename=deployment.yaml
-  - --image=gcr.io/musicrecommender-332715/github.com/khobeibm/mlopscourse:$SHORT_SHA
+  - --image=gcr.io/mymusicpredictor/github.com/khobeibm/musicpredictor:$SHORT_SHA
   - --location=us-central1-c
-  - --cluster=predictore-cluster-1
+  - --cluster=music-predictor-cluster-1
