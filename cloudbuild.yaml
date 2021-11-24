@@ -1,7 +1,7 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/$PROJECT_ID/mymusicpredictor:v1', '.']
-  timeout: 180s
+  timeout: 600s
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/$PROJECT_ID/mymusicpredictor:v1']
 - name: 'gcr.io/cloud-builders/gcloud'
