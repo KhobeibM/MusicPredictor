@@ -15,6 +15,5 @@ steps:
   args:
   - run
   - --filename=deployment.yaml
-  - --image=gcr.io/mymusicpredictor/github.com/khobeibm/musicpredictor:$SHORT_SHA
   - --location=us-central1-c
   - --cluster=music-predictor-cluster-1
