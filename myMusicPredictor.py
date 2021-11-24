@@ -28,7 +28,7 @@ def main():
     if st.button("Predict"):
         theResult = myPredictor(theAge, genderValue)
     
-    st.success("Output: {}".format(theResult))
+    st.success("**Output: {}".format(theResult))
     
 if __name__ == "__main__":
     main()
