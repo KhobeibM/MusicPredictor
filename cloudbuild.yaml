@@ -16,5 +16,5 @@ steps:
   - run
   - --filename=deployment.yaml
   - --location=us-central1-c
-  - --cluster=music-predictor-cluster-1
+  - --cluster=music-predictor
   timeout: 660s
