@@ -1,41 +1,19 @@
----
-apiVersion: "apps/v1"
-kind: "Deployment"
+apiVersion: apps/v1
+kind: Deployment
 metadata:
-  name: "musicpredictor"
-  namespace: "default"
-  labels:
-    app: "musicpredictor"
+  name: musicpredictor
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
-      app: "musicpredictor"
+      app: musicpredictor
   template:
     metadata:
       labels:
-        app: "musicpredictor"
+        app: musicpredictor
     spec:
       containers:
-      - name: "musicpredictor-1"
-        image: "gcr.io/mymusicpredictor/github.com/khobeibm/musicpredictor:$SHORT_SHA"
----
-apiVersion: "autoscaling/v2beta1"
-kind: "HorizontalPodAutoscaler"
-metadata:
-  name: "musicpredictor-hpa-v2ji"
-  namespace: "default"
-  labels:
-    app: "musicpredictor"
-spec:
-  scaleTargetRef:
-    kind: "Deployment"
-    name: "musicpredictor"
-    apiVersion: "apps/v1"
-minReplicas: 1
-  maxReplicas: 5
-  metrics:
-  - type: "Resource"
-    resource:
-      name: "cpu"
-      targetAverageUtilization: 80
+      - name: cv-app
+        image: gcr.io/$PROJECT_ID/mymusicpredictor
+        ports:
+        - containerPort: 8501
