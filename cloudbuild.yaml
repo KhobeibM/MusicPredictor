@@ -14,7 +14,7 @@ steps:
 - name: "gcr.io/cloud-builders/gke-deploy"
   args:
   - run
-  - --filename=deployment.yaml
+  - --filename=kubernetes/
   - --location=us-central1-c
   - --cluster=music-predictor
   timeout: 660s
