@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: musicpredictor
-        image: gcr.io/mymusictutorial/mymusictutorial:v1
+        image: gcr.io/mymusicpred/mymusicpredictor:v1
         ports:
         - containerPort: 8501
