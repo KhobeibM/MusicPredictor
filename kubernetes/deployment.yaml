@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: musicpredictor
+  namespace: default
+  labels:
+    app: "musicpredictor"
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: musicpredictor
+  template:
+    metadata:
+      labels:
+        app: musicpredictor
+    spec:
+      containers:
+      - name: musicpredictor
+        image: gcr.io/mymusictutorial/mymusictutorial:v1
+        ports:
+        - containerPort: 8501
